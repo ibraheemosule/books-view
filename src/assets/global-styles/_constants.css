@@ -1,5 +1,10 @@
 :root {
   --grey-400: rgb(238, 238, 238);
   --white: rgb(255, 255, 255);
+
+  --grey-500: #aaaaaa;
   --grey-800: rgba(0, 0, 0, 0.05);
+  --tablet: 786px;
+  --black: rgb(0,0,0);
+  --green:  rgb(101, 193, 0);
 }

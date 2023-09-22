@@ -1,1 +1,1 @@
-export const addClass = (...args) => `class="${args.join(", ")}"`;
+export const addClass = (...args) => `class="${args.join(" ")}"`;

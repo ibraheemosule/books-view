@@ -1,3 +1,6 @@
+@import "./search-bar/search-bar.module.css";
+@import "./header-logo/header-logo.module.css";
+
 .header {
   position: sticky;
   top: 0;
@@ -7,8 +10,18 @@
   border-bottom: 1px solid var(--grey-400);
 }
 
+.nav {
+  padding: 15px 30px 15px 80px;
+  position: relative;
+}
+
+.nav_menu {
+  justify-content: space-between;
+}
+
+
 @media (min-width: 768px) {
-  .header {
-    position: relative;
+  .nav {
+    padding: 15px 2.5rem;
   }
 }
