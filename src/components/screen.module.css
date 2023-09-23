@@ -1,0 +1,13 @@
+.main {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .main {
+    display: grid;
+    z-index: 10;
+    grid-template-columns: 350px 1fr;
+  }
+}
+
+

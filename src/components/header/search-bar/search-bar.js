@@ -1,4 +1,5 @@
 import s from "./search-bar.module.css";
+import {close_btn} from '../../../assets/global-styles/reusables.module.css';
 import { addClass } from "../../reusables/helpers";
 import search_icon from "../../../assets/images/search-icon.svg";
 import back_icon from "../../../assets/images/back.svg";
@@ -8,7 +9,7 @@ const SearchBar = () => {
   return `
   <span ${addClass(s.search)}>
   <div  ${addClass("mobile")}>
-    <div  ${addClass("back-button", "flex-center")}>
+    <div  ${addClass(close_btn, "flex-center")}>
       <button>
         <img src="${back_icon}"  alt="Back icon" />
       </button>
