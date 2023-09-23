@@ -28,6 +28,13 @@
     position: absolute;
     width: 1px;
   }
+
+  .books-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 323px);
+    grid-gap: 1.25rem;
+  }
+  
   
   .hide {
     display: none;
