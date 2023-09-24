@@ -15,7 +15,7 @@ const SearchBar = () => {
     </div>
   </div>
   <div ${addClass(s['searchbar'])}>
-    <label  for="search-input" ${addClass('invisible')}
+    <label for="search-input" ${addClass('invisible')}
       >Search</label
     >
     <input
@@ -25,11 +25,11 @@ const SearchBar = () => {
       aria-label="Search"
     />
 
-    <button  ${addClass(s['searchbar-icon'])}>
+    <button id="search-icon"  ${addClass(s['searchbar-icon'])}>
       <img src="${search_icon}"  alt="searchbar icon" />
     </button>
 
-    <div  ${addClass(s.searchbar__results, 'hide')}></div>
+    <div id="search-result" ${addClass(s.searchbar__results, 'hide')}></div>
   </div>
   </span>
         `;

@@ -6,6 +6,7 @@ import {
   hideElement,
   startFlickity,
 } from './helpers/helpers';
+import { onSearchInput } from './helpers/search-functionality';
 import App from './components/screen';
 
 export const actions = () => {
@@ -23,7 +24,7 @@ export const actions = () => {
     getElement('#sidebar').classList.remove(visible);
     hideElement(getElement('#overlay'));
   });
-
+  onSearchInput();
   startFlickity();
 };
 

@@ -5,7 +5,3 @@ export const getParentLiElement = (element, n) => {
   }
   return n === 0 ? element : null;
 };
-
-export const concatList = (list) => {
-  return list.join(', ');
-};

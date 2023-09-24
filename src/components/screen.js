@@ -10,9 +10,21 @@ const Screen = () => `
 
     <section ${addClass(s.main)}>
         ${SideMenu()}
-      <section ${addClass(s.content)}>
+      <section ${addClass(s.content, 'main-view')}>
         ${BooksGroup(booksFeatured)}
         ${booksGroupList.map((obj) => BooksGroup(obj)).join('')}
+      </section>
+      <section ${addClass(s.content, 'filter-view', 'hide')}>
+      <article class="content__category filtered-books">
+
+            <div>
+              <button id="back" ${addClass('flex-center', s['return'])}>
+               Return To Books Page
+              </button>
+            </div>
+            <h2></h2>
+            <ul></ul>
+          </article>
       </section>
     </section>
   </main>

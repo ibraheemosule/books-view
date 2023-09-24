@@ -41,6 +41,7 @@ const navItem = (menu) => {
                   info
                     ? `
                     <span  ${addClass(
+                      s.oval,
                       value[1] ? notification : '',
                       ['Home', 'Profile'].includes(key)
                         ? ''
