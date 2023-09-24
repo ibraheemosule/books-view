@@ -5,7 +5,7 @@ import BookStats from '../book-stats/BookStats';
 import { isAvailable } from '../../../helpers';
 
 const DetailsCard = (val) => `
-    <li$ ${addClass(s['details-card'])}>
+    <li ${addClass(s['details-card'])}>
     <div  ${addClass(s['details-card__image'])}>
     <img src="${img}" alt="${val.title}" />
     </div>
