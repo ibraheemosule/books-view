@@ -1,5 +1,4 @@
-import recentlyAddedBooks from './recently-added-books';
-import allBooks from './all-books';
+import { recentlyAddedBooks, allBooks } from './books-list';
 
 // Helper functions for Dom manipulation
 export const addClass = (...args) => `class="${args.join(' ')}"`;
