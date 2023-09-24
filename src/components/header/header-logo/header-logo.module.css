@@ -1,12 +1,12 @@
 .side-nav-btn {
-    position: absolute;
-    height: 70px;
-    width: 70px;
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%);
-  }
-  
-  .side-nav-btn img {
-    width: 1rem;
-  }
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+.side-nav-btn img {
+  width: 1rem;
+}

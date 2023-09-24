@@ -1,14 +1,18 @@
 import s from './side-menu.module.css';
-import {close_btn, logo_group, notification, flex_list, sticky_container} from '../../assets/global-styles/reusables.module.css';
-import { addClass } from "../../helpers";
+import {
+  close_btn,
+  logo_group,
+  sticky_container,
+} from '../../assets/global-styles/reusables.module.css';
+import { addClass } from '../../helpers';
 import logo_icon from '../../assets/images/users.svg';
-import close from '../../assets/images/back.svg'
+import close from '../../assets/images/back.svg';
 import { navGroup, navList } from './u_side-menu';
 
 const SideMenu = () => `
       <section id="overlay" ${addClass(s['overlay'], 'hide')}></section>
 
-      <section id="sidebar" ${addClass( s.sidebar, sticky_container)}>
+      <section id="sidebar" ${addClass(s.sidebar, sticky_container)}>
         <div class="mobile">
           <div ${addClass(close_btn, 'flex-center')}">
             <button id="close-nav">
@@ -34,4 +38,4 @@ const SideMenu = () => `
 
 `;
 
-export default SideMenu
+export default SideMenu;

@@ -1,91 +1,82 @@
+.sidebar {
+  position: fixed;
+  left: -300px;
+  width: 300px;
+  background-color: var(--white);
+  z-index: 5;
+  height: 100%;
+  top: 0;
+  transition: left ease-in 0.25s;
+  overflow-y: auto;
+}
 
+.overlay {
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 50, 50, 0.362);
+  z-index: 4;
+}
+
+@media (min-width: 768px) {
   .sidebar {
-    position: fixed;
-    left: -300px;
-    width: 300px;
-    background-color: var(--white);
-    z-index: 5;
-    height: 100%;
-    top: 0;
-    transition: left ease-in 0.25s;
-    overflow-y: auto;
-  }
-  
-  .overlay {
-    cursor: pointer;
-    position: fixed;
-    top: 0;
+    position: sticky;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(50, 50, 50, 0.362);
-    z-index: 4;
+    top: 0;
+    width: auto;
+    height: 100vh;
+    overflow: hidden;
   }
-  
-  @media (min-width: 768px) {
+}
 
-  
-    .sidebar {
-      position: sticky;
-      left: 0;
-      top: 0;
-      width: auto;
-      height: 100vh;
-      overflow:hidden
-    }
-  }
-  
-  
-  /* Sidebar */
-  .sidebar {
-    box-shadow: -10px 0px 40px rgba(0, 0, 0, 0.1);
-  }
-  
-  .sidebar.visible {
-    left: 0;
-  }
-  
-  .menu-item {
-    padding: 22px 34px;
-  }
-  
-  .menu-item + .menu-item {
-    border-top: 1px solid var(--grey-300);
-  }
-  
-  .menu h4 {
-    margin-top: 0.875rem;
-    font-size: 0.875rem;
-    font-weight: 700;
-    line-height: 1rem;
-    margin-bottom: 1.75rem;
-  }
-  
-  .sub-menu a {
-    font-size: 0.875rem;
-    line-height: 1rem;
-    color: var(--black);
-  }
-  
-  .sub-menu-item + .sub-menu-item {
-    margin-top: 13px;
-  }
-  
-  .sub-menu-item a:hover {
-    color: var(--green);
-  }
-  
-  .sub-menu-item__value {
-    color: var(--grey-500);
-    font-size: 0.75rem;
-    line-height: 0.75rem;
-  }
-  
+/* Sidebar */
+.sidebar {
+  box-shadow: -10px 0px 40px rgba(0, 0, 0, 0.1);
+}
 
-  .logo-group {
-    margin-left: 29px;
-  }
+.sidebar.visible {
+  left: 0;
+}
 
-  
-  
-  
+.menu-item {
+  padding: 22px 34px;
+}
+
+.menu-item + .menu-item {
+  border-top: 1px solid var(--grey-300);
+}
+
+.menu h4 {
+  margin-top: 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.sub-menu a {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: var(--black);
+}
+
+.sub-menu-item + .sub-menu-item {
+  margin-top: 13px;
+}
+
+.sub-menu-item a:hover {
+  color: var(--green);
+}
+
+.sub-menu-item__value {
+  color: var(--grey-500);
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+}
+
+.logo-group {
+  margin-left: 29px;
+}

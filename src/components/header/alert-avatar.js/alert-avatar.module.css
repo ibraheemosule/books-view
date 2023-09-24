@@ -1,63 +1,58 @@
-
 .alert-avatar button:not(.avatar) {
-    height: 40px;
-    width: 40px;
-  }
-  
-  .alert-avatar button:not(.avatar):hover {
-    background-color: rgba(0, 0, 0, 0.03);
-  }
-  
-  .alert-avatar .search-icon {
-    height: 15px;
-  }
-  
-  .alert-avatar button:not(.avatar) img {
-    height: 20px;
-  }
+  height: 40px;
+  width: 40px;
+}
 
-  .alert {
-    position: relative;
-  }
+.alert-avatar button:not(.avatar):hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
 
+.alert-avatar .search-icon {
+  height: 15px;
+}
 
-  .alert span {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0.25rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
-    height: 20px;
-    width: 20px;
-    font-size: 0.75rem;
-    line-height: 0.75rem;
-    color: var(--white);
-    background-color: var(--green)
-  }
+.alert-avatar button:not(.avatar) img {
+  height: 20px;
+}
 
+.alert {
+  position: relative;
+}
+
+.alert span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.25rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  height: 20px;
+  width: 20px;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  color: var(--white);
+  background-color: var(--green);
+}
 
 @media (min-width: 768px) {
-  
-    .alert span {
-      top: 5px;
-      right: 5px;
-    }
-  
-    .alert-avatar button:not(.avatar) {
-      width: 50px;
-      height: 50px;
-    }
-  
-    .alert-avatar button.avatar {
-      margin-left: 1.25rem;
-    }
-  
-    .alert-avatar button.avatar img {
-      width: 70px;
-    }
+  .alert span {
+    top: 5px;
+    right: 5px;
   }
-  
+
+  .alert-avatar button:not(.avatar) {
+    width: 50px;
+    height: 50px;
+  }
+
+  .alert-avatar button.avatar {
+    margin-left: 1.25rem;
+  }
+
+  .alert-avatar button.avatar img {
+    width: 70px;
+  }
+}

@@ -1,6 +1,5 @@
-
 // Helper functions for Dom manipulation
-export const addClass = (...args) => `class="${args.join(" ")}"`;
+export const addClass = (...args) => `class="${args.join(' ')}"`;
 export const displayElement = (el) => el.classList.remove('hide');
 export const hideElement = (el) => el.classList.add('hide');
 export const getElement = (attr) => document.querySelector(attr);

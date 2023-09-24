@@ -1,24 +1,26 @@
 import s from './cover-card.module.css';
 import { addClass } from '../../../helpers';
 import img from '../../../assets/images/effective python.png';
-import BookStats from '../book-stats/BookStats'
-import menu_icon from '../../../assets/images/cover-card-menu.svg'
-import close_icon from '../../../assets/images/cover-card-close.svg'
+import BookStats from '../book-stats/BookStats';
+import menu_icon from '../../../assets/images/cover-card-menu.svg';
+import close_icon from '../../../assets/images/cover-card-close.svg';
 import { isAvailable, concatList } from './u_cover-card';
- 
 
 const CoverCard = (val) => `
 
-    <li ${addClass(s["cover-card"])}>
-        <div ${addClass(s["cover-card__image"])}>
+    <li ${addClass(s['cover-card'])}>
+        <div ${addClass(s['cover-card__image'])}>
             <img src="${img}" alt="${val.title}" />
         </div>
         <div ${addClass(s['cover-card__content'])}>
             <div>
-      <p ${addClass(s['cover-card__status'],  s[`cover-card__status--${isAvailable(val.status)}`])}>${val.status}</p>
-      <article ${addClass(s["cover-card__details"])}>
+      <p ${addClass(
+        s['cover-card__status'],
+        s[`cover-card__status--${isAvailable(val.status)}`]
+      )}>${val.status}</p>
+      <article ${addClass(s['cover-card__details'])}>
         <h4>${val.title}</h4>
-        <p ${addClass(s["cover-card__details-authors"])}>
+        <p ${addClass(s['cover-card__details-authors'])}>
           ${concatList(val.authors)}
           <br/>
           ${val.year ? val.year : ''}
@@ -41,7 +43,7 @@ const CoverCard = (val) => `
       <img src="${menu_icon}" alt="show card details"/>
       </button>
     </div>
-    <div  ${addClass("hide")}>
+    <div  ${addClass('hide')}>
       <button>
       <img src="${close_icon}" alt="close card details"/>
       </button>
@@ -53,4 +55,4 @@ const CoverCard = (val) => `
 
 `;
 
-export default CoverCard
+export default CoverCard;

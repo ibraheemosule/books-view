@@ -1,6 +1,6 @@
 import s from './screen.module.css';
-import Header from "./header/header";
-import { addClass } from "../helpers";
+import Header from './header/header';
+import { addClass } from '../helpers';
 import RecentlyAdded from './recently-added/RecentlyAdded';
 
 import SideMenu from './side-menu/SideMenu';
@@ -12,7 +12,10 @@ const Screen = () => `
     <section ${addClass(s.main)}>
       ${SideMenu()}
       <section ${addClass(s.content)}>
-        <section id="recently-added" ${addClass(s.category, s['recently-added'])}>
+        <section id="recently-added" ${addClass(
+          s.category,
+          s['recently-added']
+        )}>
           ${RecentlyAdded()}
         </section>
       </section>
@@ -20,4 +23,4 @@ const Screen = () => `
   </main>
 `;
 
-export default Screen
+export default Screen;

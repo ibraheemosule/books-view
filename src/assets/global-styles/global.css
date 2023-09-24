@@ -1,63 +1,61 @@
-@import "_constants.css";
-@import "_reset.css";
-
+@import '_constants.css';
+@import '_reset.css';
 
 .flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .flex-items-center {
-    display: flex;
-    align-items: center;
-  }
-  
-  .flex-justify-center {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .invisible {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-items-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.invisible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.books-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 323px);
+  grid-gap: 1.25rem;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.desktop {
+  display: none;
+}
+
+.mobile {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .desktop {
+    display: block;
   }
 
-  .books-group {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 323px);
-    grid-gap: 1.25rem;
-  }
-  
-  
-  .hide {
-    display: none;
-  }
-  
-  .show {
-    display: block;
-  }
-  
-  .desktop {
-    display: none;
-  }
-  
   .mobile {
-    display: block;
+    display: none;
   }
-  
-  @media (min-width: 768px) {
-    .desktop {
-      display: block;
-    }
-  
-    .mobile {
-      display: none;
-    }
-  }
+}
