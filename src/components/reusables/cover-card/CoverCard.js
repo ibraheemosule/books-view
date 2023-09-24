@@ -4,7 +4,8 @@ import img from '../../../assets/images/effective python.png';
 import BookStats from '../book-stats/BookStats';
 import menu_icon from '../../../assets/images/cover-card-menu.svg';
 import close_icon from '../../../assets/images/cover-card-close.svg';
-import { isAvailable, concatList } from './u_cover-card';
+import { concatList } from './u_cover-card';
+import { isAvailable } from '../../../helpers';
 
 const CoverCard = (val) => `
 

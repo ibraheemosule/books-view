@@ -1,8 +1,6 @@
 import s from './book-stats.module.css';
 import { addClass } from '../../../helpers';
-import { getStars } from './u_book-stats';
-import book_readers_icon from '../../../assets/images/book-readers.svg';
-import book_likes_icon from '../../../assets/images/book-likes.svg';
+import { getStars, likeSvg, readersSvg } from './u_book-stats';
 
 const BookStats = ({ readers, ratings, likes }) => `
 
@@ -18,11 +16,12 @@ const BookStats = ({ readers, ratings, likes }) => `
 </div>
 <div  ${addClass(s['stats__users'], 'flex-items-center')}">
   <div  ${addClass('flex-items-center')}>
-    <img src="${book_readers_icon}" alt="number of readers"/>
+  ${readersSvg()}
     <p>${readers}</p>
   </div>
-  <div  ${addClass('flex-items-center')}>
-    <img src="${book_likes_icon}" alt="number of likes"/>
+  <div ${addClass('flex-items-center')}>
+  ${likeSvg()}
+
     <p>${likes}</p>
   </div>
 </div>

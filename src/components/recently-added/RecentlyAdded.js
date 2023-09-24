@@ -1,5 +1,6 @@
 import { addClass } from '../../helpers';
-import CoverCard from '../reusables/cover-card/cover-card';
+import CoverCard from '../reusables/cover-card/CoverCard';
+import DetailsCard from '../reusables/details-card/DetailsCard';
 
 const val = {
   id: 3,
@@ -21,6 +22,7 @@ const RecentlyAdded = () => `
   <h2>Recently Added</h2>
   <ul  ${addClass('books-group')}>
    ${CoverCard(val)}
+   ${DetailsCard(val)}
 
   </ul>
 
