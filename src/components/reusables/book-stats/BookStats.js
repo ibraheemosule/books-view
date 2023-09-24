@@ -1,5 +1,5 @@
 import s from './book-stats.module.css';
-import { addClass } from '../helpers';
+import { addClass } from '../../../helpers';
 import { getStars } from './u_book-stats';
 import book_readers_icon from '../../../assets/images/book-readers.svg';
 import book_likes_icon from '../../../assets/images/book-likes.svg';

@@ -1,6 +1,6 @@
 import s from './screen.module.css';
 import Header from "./header/header";
-import { addClass } from "./reusables/helpers";
+import { addClass } from "../helpers";
 import RecentlyAdded from './recently-added/RecentlyAdded';
 
 import SideMenu from './side-menu/SideMenu';

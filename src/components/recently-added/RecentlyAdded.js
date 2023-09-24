@@ -1,4 +1,4 @@
-import { addClass } from '../reusables/helpers';
+import { addClass } from '../../helpers';
 import CoverCard from '../reusables/cover-card/cover-card';
 
 const val =   {

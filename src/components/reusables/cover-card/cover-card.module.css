@@ -127,7 +127,7 @@
     opacity: 0;
   }
   
-  .cover-card__control .cog {
+  .cover-card__control .open {
     background-color: var(--white);
     height: 27px;
     width: 27px;

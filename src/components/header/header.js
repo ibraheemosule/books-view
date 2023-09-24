@@ -1,6 +1,6 @@
 import s from "./header.module.css";
 import {sticky_container} from '../../assets/global-styles/reusables.module.css'
-import { addClass } from "../reusables/helpers";
+import { addClass } from "../../helpers";
 import HeaderLogo from "./header-logo/header-logo";
 import SearchBar from "./search-bar/search-bar";
 import AlertAvatar from "./alert-avatar.js/alert-avatar";

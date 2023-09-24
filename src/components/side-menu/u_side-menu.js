@@ -1,6 +1,6 @@
 import s from './side-menu.module.css';
 import { notification, flex_list} from '../../assets/global-styles/reusables.module.css';
-import { addClass } from "../reusables/helpers";
+import { addClass } from "../../helpers";
 
 
 const topMenu = {

@@ -1,20 +1,11 @@
 import s from './cover-card.module.css';
-import { addClass } from '../helpers';
+import { addClass } from '../../../helpers';
 import img from '../../../assets/images/effective python.png';
 import BookStats from '../book-stats/BookStats'
 import menu_icon from '../../../assets/images/cover-card-menu.svg'
 import close_icon from '../../../assets/images/cover-card-close.svg'
-
-  function isAvailable(status) {
-    if (status === 'Available') {
-      return 'green';
-    }
-    return 'red';
-  }
-
-  function concatList(list) {
-    return list.join(', ');
-  }
+import { isAvailable, concatList } from './u_cover-card';
+ 
 
 const CoverCard = (val) => `
 
@@ -46,13 +37,13 @@ const CoverCard = (val) => `
   </div>
   <div  ${addClass(s['cover-card__control'], 'mobile')}>
     <div>
-      <button ${addClass(s.cog, 'flex-center')}>
-      <img src="${menu_icon}" />
+      <button  ${addClass(s.open, 'flex-center')}>
+      <img src="${menu_icon}" alt="show card details"/>
       </button>
     </div>
     <div  ${addClass("hide")}>
-      <button  ${addClass("close")}>
-      <img src="${close_icon}" />
+      <button>
+      <img src="${close_icon}" alt="close card details"/>
       </button>
     </div>
     <button aria-hidden="true"></button>
