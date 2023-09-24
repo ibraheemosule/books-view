@@ -1,6 +1,6 @@
 import s from './header-logo.module.css';
 import { logo_group } from '../../../assets/global-styles/reusables.module.css';
-import { addClass } from '../../../helpers';
+import { addClass } from '../../../helpers/helpers';
 import hamburger_icon from '../../../assets/images/hamburger.svg';
 import logo_icon from '../../../assets/images/users.svg';
 

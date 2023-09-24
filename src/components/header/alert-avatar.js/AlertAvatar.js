@@ -1,5 +1,5 @@
 import s from './alert-avatar.module.css';
-import { addClass } from '../../../helpers';
+import { addClass } from '../../../helpers/helpers';
 import notification_icon from '../../../assets/images/notification.svg';
 import avatar_icon from '../../../assets/images/avatar.svg';
 import books_icon from '../../../assets/images/books.svg';

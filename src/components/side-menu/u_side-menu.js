@@ -3,7 +3,7 @@ import {
   notification,
   flex_list,
 } from '../../assets/global-styles/reusables.module.css';
-import { addClass } from '../../helpers';
+import { addClass } from '../../helpers/helpers';
 
 const topMenu = {
   Home: [],

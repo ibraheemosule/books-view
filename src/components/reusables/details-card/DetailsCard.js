@@ -1,13 +1,12 @@
 import s from './details-card.module.css';
-import { addClass } from '../../../helpers';
-import img from '../../../assets/images/effective python.png';
+import { addClass } from '../../../helpers/helpers';
 import BookStats from '../book-stats/BookStats';
-import { isAvailable } from '../../../helpers';
+import { imgFilePath, isAvailable } from '../../../helpers/helpers';
 
 const DetailsCard = (val) => `
     <li ${addClass(s['details-card'])}>
     <div  ${addClass(s['details-card__image'])}>
-    <img src="${img}" alt="${val.title}" />
+    <img src="${imgFilePath(val.title)}" alt="${val.title}" />
     </div>
     <div  ${addClass(s['details-card__content'])}>
     <p  ${addClass(

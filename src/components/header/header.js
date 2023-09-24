@@ -1,9 +1,9 @@
 import s from './header.module.css';
 import { sticky_container } from '../../assets/global-styles/reusables.module.css';
-import { addClass } from '../../helpers';
-import HeaderLogo from './header-logo/header-logo';
-import SearchBar from './search-bar/search-bar';
-import AlertAvatar from './alert-avatar.js/alert-avatar';
+import { addClass } from '../../helpers/helpers';
+import HeaderLogo from './header-logo/HeaderLogo';
+import SearchBar from './search-bar/SearchBar';
+import AlertAvatar from './alert-avatar.js/AlertAvatar';
 
 const Header = () => {
   return `

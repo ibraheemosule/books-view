@@ -1,6 +1,6 @@
 import s from './search-bar.module.css';
 import { close_btn } from '../../../assets/global-styles/reusables.module.css';
-import { addClass } from '../../../helpers';
+import { addClass } from '../../../helpers/helpers';
 import search_icon from '../../../assets/images/search-icon.svg';
 import back_icon from '../../../assets/images/back.svg';
 

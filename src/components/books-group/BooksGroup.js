@@ -1,4 +1,4 @@
-import { addClass } from '../../helpers';
+import { addClass } from '../../helpers/helpers';
 import DetailsCard from '../reusables/details-card/DetailsCard';
 import s from './books-group.module.css';
 

@@ -1,5 +1,5 @@
 import s from './book-stats.module.css';
-import { addClass } from '../../../helpers';
+import { addClass } from '../../../helpers/helpers';
 import { getStars, likeSvg, readersSvg } from './u_book-stats';
 
 const BookStats = ({ readers, ratings, likes }) => `

@@ -1,9 +1,8 @@
 import s from './screen.module.css';
 import Header from './header/header';
-import { addClass } from '../helpers';
 import BooksGroup from './books-group/BooksGroup';
 import SideMenu from './side-menu/SideMenu';
-import { booksGroupList } from '../helpers/helpers';
+import { booksGroupList, addClass } from '../helpers/helpers';
 
 const Screen = () => `
   <main>

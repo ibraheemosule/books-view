@@ -1,5 +1,6 @@
 import recentlyAddedBooks from './recently-added-books';
 import allBooks from './all-books';
+
 // Helper functions for Dom manipulation
 export const addClass = (...args) => `class="${args.join(' ')}"`;
 export const displayElement = (el) => el.classList.remove('hide');
@@ -18,3 +19,6 @@ export const booksGroupList = [
   { 'recently added': recentlyAddedBooks },
   { 'all books': allBooks },
 ];
+
+export const imgFilePath = (img) =>
+  new URL(`../assets/images/${img}.png`, import.meta.url).href;
