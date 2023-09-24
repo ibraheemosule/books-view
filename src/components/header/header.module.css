@@ -20,6 +20,12 @@
 }
 
 @media (min-width: 768px) {
+  .header {
+    position: fixed;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    top: 0;
+  }
   .nav {
     padding: 15px 2.5rem;
   }

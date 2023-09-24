@@ -22,19 +22,9 @@
 }
 
 .oval {
-  border-radius: 45% !important;
-  padding: 0.25rem 0.75rem !important;
-}
-
-@media (min-width: 768px) {
-  .sidebar {
-    position: sticky;
-    left: 0;
-    top: 0;
-    width: auto;
-    height: 100vh;
-    overflow: hidden;
-  }
+  border-radius: 50% !important;
+  padding: 0.25rem 0.6rem !important;
+  width: unset !important;
 }
 
 /* Sidebar */
@@ -69,7 +59,7 @@
 }
 
 .sub-menu-item + .sub-menu-item {
-  margin-top: 13px;
+  margin-top: 10px;
 }
 
 .sub-menu-item a:hover {
@@ -84,4 +74,17 @@
 
 .logo-group {
   margin-left: 29px;
+}
+
+
+@media (min-width: 768px) {
+  .sidebar {
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 100px;
+  }
 }
