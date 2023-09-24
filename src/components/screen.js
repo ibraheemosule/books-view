@@ -11,8 +11,10 @@ const Screen = () => `
     <section ${addClass(s.main)}>
         ${SideMenu()}
       <section ${addClass(s.content, 'main-view')}>
+      <div ${addClass(s.wrapper)}>
         ${BooksGroup(booksFeatured)}
         ${booksGroupList.map((obj) => BooksGroup(obj)).join('')}
+        </div>
       </section>
       <section ${addClass(s.content, 'filter-view', 'hide')}>
       <article class="content__category filtered-books">
