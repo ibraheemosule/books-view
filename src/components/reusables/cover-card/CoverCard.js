@@ -1,39 +1,38 @@
 import s from './cover-card.module.css';
 import { addClass } from '../../../helpers';
-import img from '../../../assets/images/effective python.png';
 import BookStats from '../book-stats/BookStats';
 import menu_icon from '../../../assets/images/cover-card-menu.svg';
 import close_icon from '../../../assets/images/cover-card-close.svg';
 import { concatList } from './u_cover-card';
-import { isAvailable } from '../../../helpers';
+import { isAvailable, imgFilePath } from '../../../helpers/helpers';
 
-const CoverCard = (val) => `
+const CoverCard = (book) => `
 
     <li ${addClass(s['cover-card'])}>
         <div ${addClass(s['cover-card__image'])}>
-            <img src="${img}" alt="${val.title}" />
+            <img src="${imgFilePath(book.title)}" alt="${book.title}" />
         </div>
         <div ${addClass(s['cover-card__content'])}>
             <div>
       <p ${addClass(
         s['cover-card__status'],
-        s[`cover-card__status--${isAvailable(val.status)}`]
-      )}>${val.status}</p>
+        s[`cover-card__status--${isAvailable(book.status)}`]
+      )}>${book.status}</p>
       <article ${addClass(s['cover-card__details'])}>
-        <h4>${val.title}</h4>
+        <h4>${book.title}</h4>
         <p ${addClass(s['cover-card__details-authors'])}>
-          ${concatList(val.authors)}
+          ${concatList(book.authors)}
           <br/>
-          ${val.year ? val.year : ''}
+          ${book.year ? book.year : ''}
         </p>
         <p  ${addClass(s['cover-card__details-genre'], 'desktop')}>
           <span ${addClass(s['cover-card__details--bold'])}>Genre: </span>
-          ${concatList(val.genre)}
+          ${concatList(book.genre)}
           <br/>
           <span  ${addClass(s['cover-card__details--bold'])}>Labels: </span>
-          ${concatList(val.labels)}
+          ${concatList(book.labels)}
         </p>
-       ${BookStats(val.stats)}
+       ${BookStats(book.stats)}
         </div>
       </article>
     </div>
