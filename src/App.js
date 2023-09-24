@@ -1,6 +1,11 @@
 import './assets/global-styles/global.css';
 import { visible } from './components/side-menu/side-menu.module.css';
-import { getElement, displayElement, hideElement } from './helpers/helpers';
+import {
+  getElement,
+  displayElement,
+  hideElement,
+  startFlickity,
+} from './helpers/helpers';
 import App from './components/screen';
 
 export const actions = () => {
@@ -18,6 +23,8 @@ export const actions = () => {
     getElement('#sidebar').classList.remove(visible);
     hideElement(getElement('#overlay'));
   });
+
+  startFlickity();
 };
 
 export default App;

@@ -8,26 +8,6 @@
   box-shadow: inset -10px 0px 40px rgba(0, 0, 0, 0.05);
 }
 
-.category {
-  margin-bottom: 4rem;
-}
-
-.category.featured-books {
-  margin-bottom: 1.5rem;
-}
-
-.category h2 {
-  margin-top: 0;
-  font-weight: 400;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--grey-300);
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
 @media (min-width: 768px) {
   .main {
     display: grid;
@@ -37,18 +17,5 @@
 
   .content {
     padding: 27px 2.5rem;
-  }
-
-  .category {
-    margin-bottom: 2.5rem;
-  }
-
-  .category h2 {
-    margin-bottom: 23px;
-    padding-bottom: 0.875rem;
-  }
-
-  .category.featured-books {
-    margin-bottom: 2.5rem;
   }
 }

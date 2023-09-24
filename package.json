@@ -14,7 +14,9 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": ["eslint --fix"]
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
   },
   "husky": {
     "hooks": {
@@ -29,6 +31,7 @@
     "eslint": "^8.50.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
+    "flickity": "^3.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1"
   }

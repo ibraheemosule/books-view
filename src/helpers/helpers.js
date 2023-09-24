@@ -1,4 +1,7 @@
 import { recentlyAddedBooks, allBooks } from './books-list';
+import { featuredBooks } from './books-list';
+import Flickity from 'flickity';
+import s from '../components/reusables/cover-card/cover-card.module.css';
 
 // Helper functions for Dom manipulation
 export const addClass = (...args) => `class="${args.join(' ')}"`;
@@ -6,6 +9,8 @@ export const displayElement = (el) => el.classList.remove('hide');
 export const hideElement = (el) => el.classList.add('hide');
 export const getElement = (attr) => document.querySelector(attr);
 export const getAllElement = (attr) => document.querySelectorAll(attr);
+export const imgFilePath = (img) =>
+  new URL(`../assets/images/${img}.png`, import.meta.url).href;
 
 export const isAvailable = (status) => {
   if (status === 'Available') {
@@ -19,5 +24,20 @@ export const booksGroupList = [
   { 'all books': allBooks },
 ];
 
-export const imgFilePath = (img) =>
-  new URL(`../assets/images/${img}.png`, import.meta.url).href;
+export const booksFeatured = { 'featured books': featuredBooks };
+
+export function startFlickity() {
+  const carouselContainer = document.querySelector('.books-carousel');
+
+  new Flickity(carouselContainer, {
+    // cellAlign: 'left',
+    cellSelector: '.' + s['cover-card'],
+    contain: true,
+    adaptiveHeight: true,
+    freeScroll: true,
+    cellAlign: 'top',
+    pageDots: true,
+    percentPosition: false,
+    arrowShape: 'M 49.74,100 L 47.7250,6.092 L 4.52,55.0433 L 49.74,100 Z',
+  });
+}
