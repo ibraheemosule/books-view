@@ -6,7 +6,7 @@
   z-index: 5;
   height: 100%;
   top: 0;
-  transition: left ease-in 0.25s;
+  transition: left ease-in 0.15s;
   overflow-y: auto;
 }
 

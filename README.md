@@ -1,6 +1,6 @@
-# Project Name
+# Books View
 
-Book Club
+## A project to view books and details about the books
 
 ## Table of Contents
 
@@ -13,26 +13,46 @@ Book Club
 
 ## Demo
 
-Provide a link to a live demo of your project, if available. You can also include screenshots or GIFs to showcase its functionality.
+Visit the website [here](https://books-view.vercel.app)
 
 ## Features
 
-List the key features of your project:
+List the key features:
 
-- Feature 1
-- Feature 2
-- Feature 3
+- Shows a list of all books, featured books and recently add books
+- Search for a book title or author
+- View featured card details by hovering on it or clicking on its menu button on mobile
 
 ## Installation
 
-Provide step-by-step instructions on how to install and set up your project locally. Include any dependencies and prerequisites.
+Installation of the project
 
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/your-project.git
+- Clone the repository
+git clone <https://github.com/ibraheemsulay/books-views.git>
 
-# Change into the project directory
+- Change into the project directory
 cd your-project
 
-# Install dependencies (if applicable)
-npm install
+- Install dependencies (if applicable)
+yarn install
+
+## Entry Point of the Project
+
+The entry point of the project is the main.js in the root folder
+
+## Tools used
+
+- Vite
+Vite was used to modularize the code and bundled the project
+
+- Eslint
+For improving code quality and spotting errors in the code
+
+- Prettier
+Used for maintaining code arrangement
+
+- Husky
+Used to run commands before commit
+
+-- Glider
+A zero dependency mini library which is an alternative to flickity used for carousel initialization
