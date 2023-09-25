@@ -45,15 +45,4 @@ export const startGlider = () => {
       next: '.glider-next',
     },
   });
-
-  // new Flickity(carouselContainer, {
-  //   cellAlign: 'left',
-  //   cellSelector: '.' + s['cover-card'],
-  //   contain: true,
-  //   adaptiveHeight: true,
-  //   freeScroll: true,
-  //   pageDots: true,
-  //   percentPosition: false,
-  //   arrowShape: 'M 49.74,100 L 47.7250,6.092 L 4.52,55.0433 L 49.74,100 Z',
-  // });
 };

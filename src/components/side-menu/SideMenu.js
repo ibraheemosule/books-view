@@ -4,7 +4,7 @@ import {
   logo_group,
 } from '../../assets/global-styles/reusables.module.css';
 import { addClass } from '../../helpers/helpers';
-import logo_icon from '../../assets/images/notification.svg';
+import logo_icon from '../../assets/images/kora-logo.png';
 import close from '../../assets/images/back.svg';
 import { navGroup, navList } from './u_side-menu';
 

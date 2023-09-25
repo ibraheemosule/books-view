@@ -1,13 +1,25 @@
 import { getElement, hideElement, displayElement } from './helpers';
 import headerStyles from '../components/header/header.module.css';
+import coverCardStyles from '../components/reusables/cover-card/cover-card.module.css';
 
-const open = headerStyles.search_container;
-
-const toggleSearchOnMobile = () => {
+export const mobileToggles = () => {
   const searchbar = getElement('#search-container');
   const avatarAlert = getElement('#avatar');
+  const carousel = getElement('.books-carousel');
+
+  carousel.addEventListener('click', (e) => {
+    //Cover card button toggle on mobile
+    const target = e.target || e.srcElement;
+    const el = target.parentNode;
+    const card = el.parentNode;
+    el.classList.contains('detail') &&
+      el.querySelectorAll('div').forEach((e) => e.classList.toggle('hide'));
+    card.classList.toggle(coverCardStyles.mobile);
+  });
 
   //Open the search
+  const open = headerStyles.search_container;
+
   getElement('#open-search').addEventListener('click', () => {
     searchbar.classList.remove('desktop');
     searchbar.classList.add(open);
@@ -22,4 +34,4 @@ const toggleSearchOnMobile = () => {
   });
 };
 
-export default toggleSearchOnMobile;
+export default mobileToggles;

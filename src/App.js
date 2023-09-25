@@ -8,7 +8,7 @@ import {
 } from './helpers/helpers';
 import { onSearchInput } from './helpers/search-functionality';
 import App from './components/screen';
-import toggleSearchOnMobile from './helpers/toggle-search-on-mobile';
+import mobileToggles from './helpers/mobile-toggles';
 
 export const actions = () => {
   //Get elements in the DOM
@@ -32,7 +32,8 @@ export const actions = () => {
   // initialize the Glider carousel
   startGlider();
 
-  toggleSearchOnMobile();
+  //Initialize toggles on mobile
+  mobileToggles();
 };
 
 export default App;

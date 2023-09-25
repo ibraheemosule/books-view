@@ -40,7 +40,7 @@ const CoverCard = (book) => `
       </article>
     </div>
   </div>
-  <div  ${addClass(s['cover-card__control'], 'mobile')}>
+  <div  ${addClass(s['cover-card__control'], 'detail', 'mobile')}>
     <div>
       <button  ${addClass(s.open, 'flex-center')}>
       <img src="${menu_icon}" alt="show card details"/>
