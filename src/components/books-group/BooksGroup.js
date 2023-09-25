@@ -10,7 +10,7 @@ const BooksGroup = (obj) => {
   const Render = isFeature ? CoverCard : DetailsCard;
 
   return `
-    <section id="recently-added" ${addClass(
+    <section id="${s[title.split(' ').join('-')] || ''}" ${addClass(
       s.category,
       s[title.split(' ').join('-')]
     )}>
@@ -18,6 +18,7 @@ const BooksGroup = (obj) => {
       <ul ${addClass(isFeature ? 'books-carousel' : 'books-group')}>
       ${books.map((book) => Render(book)).join('')}
       </ul>
+      <div ${addClass('dots')}></div>
     </section>
 `;
 };

@@ -5,6 +5,7 @@ import {
   displayElement,
   elementText,
   addClass,
+  getAllElement,
   hideElement,
 } from './helpers';
 import { recentlyAddedBooks } from './books-list';
@@ -19,44 +20,31 @@ export const mapBooksToInfo = (books) =>
 
 // Generates a search result string with highlighted search parameter
 export const generateHighlightedSearchResult = (book, searchParam) => {
-  const paramIndex = book.toLowerCase().indexOf(searchParam.toLowerCase());
-  let bookResult = '';
+  const lowerCaseBook = book.toLowerCase();
+  const lowerCaseSearchParam = searchParam.toLowerCase();
 
-  // Handle different search parameter positions within the book string
-  if (paramIndex === 0) {
-    // Search parameter at the beginning
-    bookResult += `<strong>${book.substr(
-      paramIndex,
-      searchParam.length
-    )}</strong>`;
-    bookResult += book.substr(paramIndex + searchParam.length);
-    return bookResult;
-  } else if (paramIndex === book.length - searchParam.length) {
-    // Search parameter at the end
-    bookResult += book.substr(0, paramIndex);
-    bookResult += `<strong>${book.substr(
-      paramIndex,
-      searchParam.length
-    )}</strong>`;
-    return bookResult;
-  } else {
-    // Search parameter within the book string
-    bookResult += book.substr(0, paramIndex);
-    bookResult += `<strong>${book.substr(
-      paramIndex,
-      searchParam.length
-    )}</strong>`;
-    bookResult += book.substr(paramIndex + searchParam.length);
-    return bookResult;
+  const paramIndex = lowerCaseBook.indexOf(lowerCaseSearchParam);
+
+  if (paramIndex === -1) {
+    // If the searchParam is not found in the book, return the original book
+    return book;
   }
+
+  const beforeParam = book.slice(0, paramIndex);
+  const matchedParam = book.slice(paramIndex, paramIndex + searchParam.length);
+  const afterParam = book.slice(paramIndex + searchParam.length);
+
+  const highlightedResult = `${beforeParam}<strong>${matchedParam}</strong>${afterParam}`;
+
+  return highlightedResult;
 };
 
 // Event handler for search input
 export function onSearchInput() {
-  // Generate initial search list from recently added books
+  // Generate the initial search list from recently added books
   const bookList = mapBooksToInfo(recentlyAddedBooks);
 
-  // Get DOM elements for rendering search results
+  // Get DOM elements for rendering search results and views
   const searchField = getElement('#search-input');
   const searchResultsContainer = getElement('#search-result');
   const mainViewElement = getElement('.main-view');
@@ -64,94 +52,83 @@ export function onSearchInput() {
   const filteredBooksListElement = getElement('.filtered-books ul');
   const filteredBooksHeader = getElement('.filtered-books h2');
 
-  // Utility function to clear the content of an element
+  //function to clear the content of an element
   const clearElement = (element) => {
     element.innerHTML = '';
   };
 
-  // Utility function to remove a CSS class from an element
+  //function to remove a CSS class from an element
   const removeClass = (element, className) => {
     element.classList.remove(className);
   };
 
-  // eslint-disable-next-line no-unused-vars
-  let searchResultsList;
-  let value;
-
-  // Show search suggestions as the user types in the input field
-  searchField.addEventListener('input', (e) => {
-    value = e.target.value.trim();
-
-    // Clear previous search results
-    clearElement(searchResultsContainer);
-
-    if (!value) {
-      // If search input field is empty, render all books and hide search results
-      removeClass(searchResultsContainer, 'active');
-      clearElement(filteredBooksListElement);
-      clearElement(filteredBooksHeader);
-      resetFilterDisplay();
-
-      return;
-    }
-
-    // Generate a filtered book list containing the search parameter
-    const filteredbookList = bookList.filter((book) =>
-      book.bookString.toLowerCase().includes(value.toLowerCase())
-    );
-
-    // Render search results in the search results container
-    searchResultsContainer.innerHTML = filteredbookList
-      .map((book) => {
-        const { bookString, bookDetails } = book;
-        // Generate unique autocomplete option
-        const bookResult = generateHighlightedSearchResult(bookString, value);
-
-        return `
-            <button onclick="renderFilterBook('${bookDetails.title}', '${value}')">${bookResult}</button>
-          `;
-      })
-      .join('');
-
-    displayElement(searchResultsContainer);
-    addClass(searchResultsContainer, 'active');
-
-    // Store results for Filtered View
-    searchResultsList = filteredbookList.map((book) => book.bookDetails);
-  });
-
-  // Event listener for clicking the back button
-  getElement('#back').addEventListener('click', function () {
-    // Return to Default View and reset the search
-    resetFilterDisplay();
-  });
-
-  // Close the search results when another element is clicked
-  document.addEventListener('click', function () {
-    hideElement(searchResultsContainer);
-    removeClass(searchResultsContainer, 'active');
-    clearElement(searchResultsContainer);
-  });
-
-  // Functions for manipulating the DOM based on search results
-  function resetFilterDisplay() {
+  // Function to reset the filter display to the default view
+  const resetFilterDisplay = () => {
     displayElement(mainViewElement);
     hideElement(filteredViewElement);
     clearElement(searchResultsContainer);
     removeClass(searchResultsContainer, 'active');
     elementText(filteredBooksHeader, '');
     clearElement(filteredBooksListElement);
-  }
-}
+  };
 
-// Function for rendering filtered books
-window.renderFilterBook = function renderFilterBook(title, searchValue) {
-  const result = recentlyAddedBooks.filter((book) => book.title === title);
-  const filterView = getElement('.filter-view');
+  // Function to show search results based on the user's input
+  const showSearchResults = (filteredbookList, value) => {
+    clearElement(searchResultsContainer);
 
-  displayElement(filterView);
-  filterView.innerHTML = BooksGroup({
-    [`"${searchValue}" Search result`]: result,
+    if (!value) {
+      resetFilterDisplay();
+      return;
+    }
+
+    for (const { bookString } of filteredbookList) {
+      const bookResult = generateHighlightedSearchResult(bookString, value);
+      searchResultsContainer.innerHTML += `<button class="search-options">${bookResult}</button>`;
+    }
+
+    displayElement(searchResultsContainer);
+    addClass(searchResultsContainer, 'active');
+
+    const searchOptionButtons = getAllElement('.search-options');
+
+    searchOptionButtons.forEach((btn, i) => {
+      const { bookDetails } = filteredbookList[i];
+
+      btn.addEventListener('click', () => {
+        const result = recentlyAddedBooks.filter(
+          (book) => book.title === bookDetails.title
+        );
+
+        const filterView = getElement('.filter-view');
+        displayElement(filterView);
+        filterView.innerHTML = BooksGroup({
+          [`"${value}" Search result`]: result,
+        });
+        hideElement(mainViewElement);
+      });
+    });
+  };
+
+  // Event listener for input changes in the search field
+  searchField.addEventListener('input', (e) => {
+    const value = e.target.value.trim();
+    showSearchResults(
+      bookList.filter((book) =>
+        book.bookString.toLowerCase().includes(value.toLowerCase())
+      ),
+      value
+    );
   });
-  hideElement(getElement('.main-view'));
-};
+
+  // Event listener for clicking the back button
+  getElement('#back').addEventListener('click', () => {
+    resetFilterDisplay();
+  });
+
+  // Close the search results when another element is clicked
+  document.addEventListener('click', () => {
+    hideElement(searchResultsContainer);
+    removeClass(searchResultsContainer, 'active');
+    clearElement(searchResultsContainer);
+  });
+}

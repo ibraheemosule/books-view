@@ -49,6 +49,13 @@
 .mobile {
   display: block;
 }
+.dots {
+  margin-top: 30px;
+}
+
+.glider-dot.active {
+  background: var(--green) !important;
+}
 
 @media (min-width: 768px) {
   .desktop {
