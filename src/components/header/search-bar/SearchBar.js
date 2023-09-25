@@ -15,14 +15,10 @@ const SearchBar = () => {
       </div>
     </div>
     <div id="searchbar" ${addClass(s['searchbar'])}>
-      <label for="search-input" ${addClass('invisible')}
-        >Search</label
-      >
       <input
         placeholder="Search books, genres, authors, etc."
-        type="search"
+        type="text"
         id="search-input"
-        aria-label="Search"
       />
 
       <button id="search-icon"  ${addClass(s['searchbar-icon'])}>
