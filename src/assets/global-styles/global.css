@@ -49,6 +49,11 @@
 .mobile {
   display: block;
 }
+
+.glider-slide {
+  min-width: 140px !important;
+}
+
 .dots {
   margin-top: 30px;
 }
@@ -65,4 +70,9 @@
   .mobile {
     display: none;
   }
+
+  .glider-slide {
+    min-width: 240px !important;
+  }
 }
+
