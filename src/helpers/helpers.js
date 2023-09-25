@@ -8,8 +8,8 @@ export const hideElement = (el) => el.classList.add('hide');
 export const getElement = (attr) => document.querySelector(attr);
 export const getAllElement = (attr) => document.querySelectorAll(attr);
 
-export const imgFilePath = (img) =>
-  new URL(`../assets/images/${img}.png`, import.meta.url).href;
+// export const imgFilePath = (img) =>
+//   new URL(`../assets/images/${img}.png`, import.meta.url).href;
 
 export const elementText = (element, text) => {
   element.textContent = text;

@@ -4,16 +4,16 @@ import menu_icon from '../../../assets/images/cover-card-menu.svg';
 import close_icon from '../../../assets/images/cover-card-close.svg';
 import {
   isAvailable,
-  imgFilePath,
   addClass,
   concatList,
 } from '../../../helpers/helpers';
+import imgLinks from '../../../helpers/image-links';
 
 const CoverCard = (book) => `
 
     <li ${addClass(s['cover-card'])}>
         <div ${addClass(s['cover-card__image'])}>
-            <img src="${imgFilePath(book.title)}" alt="${book.title}" />
+            <img src="${imgLinks[book.title]}" alt="${book.title}" />
         </div>
         <div ${addClass(s['cover-card__content'])}>
             <div>
