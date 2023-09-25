@@ -7,9 +7,6 @@
 - [Demo](#demo)
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Demo
 
@@ -54,5 +51,5 @@ Used for maintaining code arrangement
 - Husky
 Used to run commands before commit
 
--- Glider
+- Glider
 A zero dependency mini library which is an alternative to flickity used for carousel initialization
