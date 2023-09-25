@@ -72,9 +72,18 @@ export function onSearchInput() {
     clearElement(filteredBooksListElement);
   };
 
+  const hideBackBtnOnMobile = (value) => {
+   const backBtn = getElement("#close-search")
+    if(!value) displayElement(backBtn)
+    else hideElement(backBtn)
+  }
+
   // Function to show search results based on the user's input
   const showSearchResults = (filteredbookList, value) => {
     clearElement(searchResultsContainer);
+
+    //hide and show back button on mobile
+    hideBackBtnOnMobile(value)
 
     if (!value) {
       resetFilterDisplay();
