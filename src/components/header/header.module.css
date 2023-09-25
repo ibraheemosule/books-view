@@ -19,6 +19,12 @@
   justify-content: space-between;
 }
 
+.search_container {
+  display: flex;
+  flex: 1;
+  margin-left: 20px;
+}
+
 @media (min-width: 768px) {
   .header {
     position: fixed;

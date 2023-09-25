@@ -9,11 +9,10 @@ const AlertAvatar = () => {
   return `
   <span ${addClass(s['alert-avatar'])}>
     <ul  ${addClass('flex-items-center')}>
-      <li
-        
+      <li   
         ${addClass('mobile', 'mobile-search-toggle')}
       >
-        <button  ${addClass('flex-center')}>
+        <button id="open-search" ${addClass('flex-center')}>
           <img
             src="${search_icon}" 
             alt="searchbar icon"

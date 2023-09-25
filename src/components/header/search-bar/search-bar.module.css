@@ -1,7 +1,18 @@
+.search {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
 .searchbar {
   display: flex;
   position: relative;
   max-width: 100%;
+  flex-grow: 1;
+}
+
+.close_wrapper {
+  max-width: 100px;
 }
 
 .searchbar input {
@@ -62,8 +73,12 @@
 }
 
 @media (min-width: 768px) {
+  .search {
+    display: initial;
+  }
   .searchbar {
     min-width: 320px;
+    flex-grow: 0;
   }
 }
 

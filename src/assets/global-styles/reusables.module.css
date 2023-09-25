@@ -26,10 +26,6 @@
   width: 70px;
 }
 
-.close_btn:hover {
-  background-color: rgba(0, 0, 0, 0.03);
-}
-
 .close_btn button {
   height: 100%;
   width: 100%;

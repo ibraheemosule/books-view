@@ -9,13 +9,13 @@ const Header = () => {
 <header id="header" ${addClass(s.header)}>
   <nav ${addClass(s.nav)}>
     <ul ${addClass(s.nav_menu, 'flex-items-center')}>
-      <li>
+      <li class="nav-item">
         ${HeaderLogo()}
       </li>
-      <li  ${addClass('desktop')}>
+      <li id="search-container" ${addClass('desktop', 'nav-item')}>
         ${SearchBar()}
       </li>
-      <li>
+      <li id="avatar" class="nav-item">
         ${AlertAvatar()}
       </li>
     </ul>

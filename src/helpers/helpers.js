@@ -33,7 +33,7 @@ export const booksGroupList = [
 
 export const booksFeatured = { 'featured books': featuredBooks };
 
-//Flickity Setup
+//Glider Setup
 export const startGlider = () => {
   new Glider(document.querySelector('.books-carousel'), {
     slidesToShow: 5,
