@@ -25,7 +25,10 @@ export const actions = () => {
     hideElement(getElement('#overlay'));
   });
 
+  // run the search input functonality
   onSearchInput();
+
+  // initialize the Glider carousel
   startGlider();
 };
 
