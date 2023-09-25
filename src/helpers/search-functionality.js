@@ -10,6 +10,7 @@ import {
 } from './helpers';
 import { recentlyAddedBooks } from './books-list';
 import BooksGroup from '../components/books-group/BooksGroup';
+import mobileToggles from './mobile-toggles';
 
 // Maps an array of books to an array of book info objects
 export const mapBooksToInfo = (books) =>
@@ -114,6 +115,7 @@ export const onSearchInput = () => {
           [`"${value}" Search result`]: result,
         });
         hideElement(mainViewElement);
+        mobileToggles()
       });
     });
   };
