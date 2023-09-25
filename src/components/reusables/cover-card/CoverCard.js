@@ -2,11 +2,7 @@ import s from './cover-card.module.css';
 import BookStats from '../book-stats/BookStats';
 import menu_icon from '../../../assets/images/cover-card-menu.svg';
 import close_icon from '../../../assets/images/cover-card-close.svg';
-import {
-  isAvailable,
-  addClass,
-  concatList,
-} from '../../../helpers/helpers';
+import { isAvailable, addClass, concatList } from '../../../helpers/helpers';
 import imgLinks from '../../../helpers/image-links';
 
 const CoverCard = (book) => `

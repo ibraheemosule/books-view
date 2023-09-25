@@ -19,12 +19,8 @@ export const concatList = (list) => {
   return list.join(', ');
 };
 
-export const isAvailable = (status) => {
-  if (status === 'Available') {
-    return 'green';
-  }
-  return 'red';
-};
+export const isAvailable = (status) =>
+  status === 'Available' ? 'green' : 'red';
 
 export const booksGroupList = [
   { 'recently added': recentlyAddedBooks },

@@ -40,7 +40,7 @@ export const generateHighlightedSearchResult = (book, searchParam) => {
 };
 
 // Event handler for search input
-export function onSearchInput() {
+export const onSearchInput = () => {
   // Generate the initial search list from recently added books
   const bookList = mapBooksToInfo(recentlyAddedBooks);
 
@@ -140,4 +140,4 @@ export function onSearchInput() {
     removeClass(searchResultsContainer, 'active');
     clearElement(searchResultsContainer);
   });
-}
+};
