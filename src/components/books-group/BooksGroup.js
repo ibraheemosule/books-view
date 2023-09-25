@@ -7,7 +7,7 @@ const BooksGroup = (obj) => {
   const title = Object.keys(obj)[0];
   const books = Object.values(obj)[0];
   const cardType = ['all books', 'recently added'].includes(title);
-  const Render = cardType ? DetailsCard : CoverCard;
+  const Render = cardType?  DetailsCard: CoverCard;
 
   return `
     <section id="${s[title.split(' ').join('-')] || ''}" ${addClass(
