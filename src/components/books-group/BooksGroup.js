@@ -2,6 +2,8 @@ import { addClass } from '../../helpers/helpers';
 import DetailsCard from '../reusables/details-card/DetailsCard';
 import CoverCard from '../reusables/cover-card/CoverCard';
 import s from './books-group.module.css';
+import prev_icon from '../../assets/images/previous.svg';
+import next_icon from '../../assets/images/next.svg';
 
 const BooksGroup = (obj) => {
   const title = Object.keys(obj)[0];
@@ -20,8 +22,12 @@ const BooksGroup = (obj) => {
       ${books.map((book) => Render(book)).join('')}
       </ul>
       <span ${addClass(title !== 'featured books' && 'hide')}>
-      <button aria-label="Previous" class="glider-prev">«</button>
-      <button aria-label="Next" class="glider-next">»</button>
+      <button aria-label="Previous" class="glider-prev glider-btn">
+      <img src="${prev_icon}" alt="previous icon"/>
+      </button>
+      <button aria-label="Next" class="glider-next glider-btn">
+      <img src="${next_icon}" alt="next icon"/>
+      </button>
       <div ${addClass('dots')}></div>
       </span>
       </div>
