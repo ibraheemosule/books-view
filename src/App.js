@@ -26,6 +26,12 @@ export const actions = () => {
     hideElement(getElement('#overlay'));
   });
 
+    // Close the vertical nav on mobile
+  getElement('#overlay').addEventListener('click', (e) => {
+    getElement('#sidebar').classList.remove(visible);
+    hideElement(e.target);
+  });
+
   // run the search input functonality
   onSearchInput();
 
