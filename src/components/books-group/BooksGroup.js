@@ -18,7 +18,7 @@ const BooksGroup = (obj) => {
       s[title.split(' ').join('-')]
     )}>
       <h2 ${cardType ? addClass('desktop') : ''}>${title}</h2>
-      <div ${isFeature ? addClass("glider-contain"): ''}>
+      <div ${isFeature ? addClass('glider-contain') : ''}>
       <ul ${addClass(!cardType ? 'books-carousel glider' : 'books-group')}>
       ${books.map((book) => Render(book)).join('')}
       </ul>

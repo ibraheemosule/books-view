@@ -70,17 +70,12 @@
 }
 
 .glider-next {
-  margin: 0 1.5rem 0 0
+  margin: 0 1.5rem 0 0;
 }
 
-
-
-/* .glider-prev {
-  text-align: left;
+.glider-track {
+  padding-right: 50px;
 }
-.glider-next {
-  text-align: right;
-} */
 .dots {
   margin-top: 30px;
 }
@@ -100,6 +95,10 @@
 
   .glider-slide {
     min-width: 240px !important;
+  }
+
+  .glider-track {
+    padding-right: 0;
   }
 
   .glider-btn {
