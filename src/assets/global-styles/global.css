@@ -56,7 +56,7 @@
 }
 
 .glider-slide {
-  min-width: 140px !important;
+  min-width: 140px;
 }
 
 .glider-btn {
