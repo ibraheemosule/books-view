@@ -50,6 +50,11 @@
   display: block;
 }
 
+.glider-contain {
+  width: calc(100% + 5rem);
+  margin-left: -2.5rem;
+}
+
 .glider-slide {
   min-width: 140px !important;
 }
@@ -57,10 +62,15 @@
 .glider-btn {
   background: rgba(249, 248, 248, 0.506);
   cursor: pointer;
-  height: 212px;
+  height: 240px;
   width: 50px;
+  margin-left: 1.5rem;
   transform: translateY(-38%);
-  color: black;
+  text-align: center;
+}
+
+.glider-next {
+  margin: 0 1.5rem 0 0
 }
 
 
@@ -91,10 +101,15 @@
   .glider-slide {
     min-width: 240px !important;
   }
-  .glider-prev,
-  .glider-next {
+
+  .glider-btn {
     height: 365px;
     width: 50px;
     transform: translateY(-35%);
+    margin-left: 1rem;
+  }
+
+  .glider-next {
+    margin: 0 1rem 0 0;
   }
 }

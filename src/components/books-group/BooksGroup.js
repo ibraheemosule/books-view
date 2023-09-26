@@ -9,6 +9,7 @@ const BooksGroup = (obj) => {
   const title = Object.keys(obj)[0];
   const books = Object.values(obj)[0];
   const cardType = ['all books', 'recently added'].includes(title);
+  const isFeature = title === 'featured books';
   const Render = cardType ? DetailsCard : CoverCard;
 
   return `
@@ -17,11 +18,11 @@ const BooksGroup = (obj) => {
       s[title.split(' ').join('-')]
     )}>
       <h2 ${cardType ? addClass('desktop') : ''}>${title}</h2>
-      <div class="glider-contain">
+      <div ${isFeature ? addClass("glider-contain"): ''}>
       <ul ${addClass(!cardType ? 'books-carousel glider' : 'books-group')}>
       ${books.map((book) => Render(book)).join('')}
       </ul>
-      <span ${addClass(title !== 'featured books' && 'hide')}>
+      <span ${addClass(!isFeature && 'hide')}>
       <button aria-label="Previous" class="glider-prev glider-btn">
       <img src="${prev_icon}" alt="previous icon"/>
       </button>
