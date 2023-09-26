@@ -8,7 +8,7 @@ const Screen = () => `
   <main>
     ${Header()}
 
-    <section ${addClass(s.main)}>
+    <article ${addClass(s.main)}>
         ${SideMenu()}
       <section ${addClass(s.content, 'main-view')}>
       <div ${addClass(s.wrapper)}>
@@ -17,17 +17,13 @@ const Screen = () => `
         </div>
       </section>
       <section ${addClass(s.content, 'filter-view', 'hide')}>
-      <article class="content__category filtered-books">
-
+      <div class="filtered-books">
             <div>
-              <button id="back" ${addClass('flex-center', s['return'])}>
-               Return To Books Page
-              </button>
             </div>
             <h2></h2>
             <ul></ul>
-          </article>
-      </section>
+          </div>
+      </article>
     </section>
   </main>
 `;

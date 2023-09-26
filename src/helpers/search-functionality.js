@@ -10,7 +10,6 @@ import {
 } from './helpers';
 import { recentlyAddedBooks } from './books-list';
 import BooksGroup from '../components/books-group/BooksGroup';
-import mobileToggles from './mobile-toggles';
 
 // Maps an array of books to an array of book info objects
 export const mapBooksToInfo = (books) =>
@@ -115,10 +114,9 @@ export const onSearchInput = () => {
           [`"${value}" Search result`]: result,
         });
         hideElement(mainViewElement);
-   
+
       });
     });
-    mobileToggles()
   };
 
   // Event listener for input changes in the search field
@@ -130,11 +128,6 @@ export const onSearchInput = () => {
       ),
       value
     );
-  });
-
-  // Event listener for clicking the back button
-  getElement('#back').addEventListener('click', () => {
-    resetFilterDisplay();
   });
 
   // Close the search results when another element is clicked
