@@ -6,9 +6,8 @@ export const mobileToggles = () => {
   const searchbar = getElement('#search-container');
   const avatarAlert = getElement('#avatar');
   const carousel = getElement('.books-carousel');
-console.log(carousel, 'here')
+
   carousel.addEventListener('click', (e) => {
-    console.log(e)
     //Cover card button toggle on mobile
     const target = e.target || e.srcElement;
     const el = target.parentNode;
