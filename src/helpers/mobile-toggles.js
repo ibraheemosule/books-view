@@ -5,14 +5,14 @@ import coverCardStyles from '../components/reusables/cover-card/cover-card.modul
 export const mobileToggles = () => {
   const searchbar = getElement('#search-container');
   const avatarAlert = getElement('#avatar');
-  const carousel = getElement('.books-carousel') || getElement('.filter-view');
-
+  const carousel = getElement('.books-carousel');
+console.log(carousel, 'here')
   carousel.addEventListener('click', (e) => {
+    console.log(e)
     //Cover card button toggle on mobile
     const target = e.target || e.srcElement;
     const el = target.parentNode;
     const card = el.parentNode;
-    console.log(el)
     el.classList.contains('detail') &&
       el.querySelectorAll('div').forEach((e) => e.classList.toggle('hide'));
     card.classList.toggle(coverCardStyles.mobile);

@@ -115,9 +115,10 @@ export const onSearchInput = () => {
           [`"${value}" Search result`]: result,
         });
         hideElement(mainViewElement);
-        mobileToggles()
+   
       });
     });
+    mobileToggles()
   };
 
   // Event listener for input changes in the search field
