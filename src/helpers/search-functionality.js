@@ -114,7 +114,6 @@ export const onSearchInput = () => {
           [`"${value}" Search result`]: result,
         });
         hideElement(mainViewElement);
-
       });
     });
   };

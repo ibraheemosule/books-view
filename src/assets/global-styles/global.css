@@ -54,6 +54,21 @@
   min-width: 140px !important;
 }
 
+.glider-prev,
+.glider-next {
+  background: rgba(249, 248, 248, 0.506);
+  cursor: pointer;
+  height: 212px;
+  width: 50px;
+  transform: translateY(-38%);
+}
+
+.glider-prev {
+  text-align: left;
+}
+.glider-next {
+  text-align: right;
+}
 .dots {
   margin-top: 30px;
 }
@@ -73,5 +88,11 @@
 
   .glider-slide {
     min-width: 240px !important;
+  }
+  .glider-prev,
+  .glider-next {
+    height: 365px;
+    width: 50px;
+    transform: translateY(-35%);
   }
 }

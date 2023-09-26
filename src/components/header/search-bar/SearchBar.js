@@ -28,7 +28,7 @@ const SearchBar = () => {
       <div id="search-result" ${addClass(s.searchbar__results, 'hide')}></div>
     </div>
   </div>
-        `
+        `;
 };
 
 export default SearchBar;
