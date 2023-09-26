@@ -74,7 +74,7 @@
 }
 
 .glider-track {
-  padding-right: 150px;
+  padding-right: 100px !important;
 }
 .dots {
   margin-top: 30px;
