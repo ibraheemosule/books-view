@@ -1,7 +1,7 @@
 .details-card {
   display: flex;
   width: 100%;
-  max-height: 10rem;
+  max-height: 12.5rem;
   cursor: pointer;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .details-card__image img {
-  height: 10rem;
+  height: 12.5rem;
   background: var(--grey-400);
 }
 
@@ -50,4 +50,13 @@
 
 .details-card__details > p + p {
   margin-top: 3px;
+}
+
+@media (min-width: 768px) {
+  .details-card {
+    max-height: 10rem;
+  }
+  .details-card__image img {
+    height: 10rem;
+  }
 }
